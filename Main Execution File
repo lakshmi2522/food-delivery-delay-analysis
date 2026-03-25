@@ -1,0 +1,14 @@
+from model import load_and_train
+
+def main():
+    print("Training Food Delivery Delay Model...")
+    model = load_and_train()
+
+    # Example prediction
+    sample = [[6, 2, 1, 20]]  # distance, traffic, weather, prep_time
+    prediction = model.predict(sample)
+
+    print("Predicted Delivery Time:", prediction[0])
+
+if __name__ == "__main__":
+    main()
